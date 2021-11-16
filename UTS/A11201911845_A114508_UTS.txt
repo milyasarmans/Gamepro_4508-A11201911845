@@ -6,7 +6,7 @@ Link Youtube:
 https://youtu.be/zXSzdREXwds
 
 Link Source Code:
-https://drive.google.com/drive/folders/1R0_3TYKM36Co3Ffy3PKjXwwsMFwZq6gb?usp=sharing
+https://github.com/milyasarmans/Gamepro_4508-A11201911845
 
 1. Implementasi 2 Collider (Circle dan Box)
 2. Platform Effector
