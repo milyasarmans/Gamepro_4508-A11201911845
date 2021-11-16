@@ -1,0 +1,15 @@
+Nama 	: M Ilyas Arman S
+NIM 	: A11.2019.11845
+Kelompok: A11.4508
+
+Link Youtube:
+https://youtu.be/zXSzdREXwds
+
+Link Source Code:
+https://drive.google.com/drive/folders/1R0_3TYKM36Co3Ffy3PKjXwwsMFwZq6gb?usp=sharing
+
+1. Implementasi 2 Collider (Circle dan Box)
+2. Platform Effector
+3. Menampilkan jumlah kill enemy dan coins
+4. Implementasi rigidbody
+5. dll
