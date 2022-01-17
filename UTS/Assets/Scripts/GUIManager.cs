@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GUIManager : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class GUIManager : MonoBehaviour
     {
         SceneManager.LoadScene("StartMenu");
     }
+
     public void StartMenu()
     {
         SceneManager.LoadScene("StartMenu");
@@ -20,7 +22,7 @@ public class GUIManager : MonoBehaviour
     }
 
     public void PlayAgain() 
-    {
+    {        
         SceneManager.LoadScene("SampleScene");
     }
     public void NextLevel() 
@@ -34,5 +36,11 @@ public class GUIManager : MonoBehaviour
     public void Help() 
     {
         SceneManager.LoadScene("Help");
+    }
+    public void Reset() 
+    {
+        PlayerPrefs.SetInt("scoreeas",0);
+        PlayerPrefs.SetInt("scoremed",0);
+        SceneManager.LoadScene("StartMenu");
     }
 }

@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{cfc22361-54b5-2ca5-e4ab-fdf60445bbfb}</ProjectGuid>
+    <ProjectGuid>{37fd8241-c3d0-1d6b-225d-4cb205ebdf0c}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -44,6 +44,9 @@
      <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
      <Compile Include="Assets\SampleScenes\Menu\Scripts\SceneAndURLLoader.cs" />
      <Compile Include="Assets\SampleScenes\Scripts\LevelReset.cs" />
+     <Compile Include="Assets\SaveLoadHighscore.cs" />
+     <Compile Include="Assets\PlayerController.cs" />
+     <Compile Include="Assets\HeartScript.cs" />
      <Compile Include="Assets\Scripts\Shoot.cs" />
      <Compile Include="Assets\Scripts\PlayerDead.cs" />
      <Compile Include="Assets\SampleScenes\Menu\Scripts\PauseMenu.cs" />
@@ -53,23 +56,23 @@
      <Compile Include="Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
      <Compile Include="Assets\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
      <Compile Include="Assets\Scripts\MoveForward.cs" />
-     <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\BackForward.cs" />
+     <Compile Include="Assets\GameControlScript.cs" />
      <Compile Include="Assets\Scripts\ScoreManager.cs" />
+     <Compile Include="Assets\TimerSetting.cs" />
      <Compile Include="Assets\Scripts\GUIManager.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\Sprites\SpritesSheets\license.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+     <None Include="Assets\Assets\New Text Document.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
      <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
-     <None Include="Assets\Sprites\SpritesSheets\Enemies\enemies_spritesheet.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
-     <None Include="Assets\Sprites\SpritesSheets\Player\p2_spritesheet.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
@@ -78,7 +81,6 @@
      <None Include="Assets\Sprites\SpritesSheets\Items\items_spritesheet.xml" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
-     <None Include="Assets\Sprites\SpritesSheets\Player\p3_spritesheet.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
      <None Include="Assets\Sprites\SpritesSheets\Tiles\tiles_spritesheet.xml" />
@@ -86,7 +88,6 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
      <None Include="Assets\Sprites\SpritesSheets\HUD\hud_spritesheet.xml" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
-     <None Include="Assets\Sprites\SpritesSheets\Player\p1_spritesheet.txt" />
     <Reference Include="UnityEngine">
         <HintPath>D:/2020.3.17f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -310,7 +311,7 @@
         <HintPath>D:/2020.3.17f1/Editor/Data/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-        <HintPath>E:/#DianNuswantoro/#Semester5/Game Programming/GameUTS/MyUTS/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
+        <HintPath>C:/Users/ACER/Downloads/Compressed/Gamepro_4508-A11201911845-main/UTS/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
         <HintPath>D:/2020.3.17f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -658,99 +659,99 @@
         <HintPath>D:/2020.3.17f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Animation.Editor">
-        <HintPath>E:/#DianNuswantoro/#Semester5/Game Programming/GameUTS/MyUTS/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
+        <HintPath>C:/Users/ACER/Downloads/Compressed/Gamepro_4508-A11201911845-main/UTS/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.InternalAPIEngineBridge.001">
-        <HintPath>E:/#DianNuswantoro/#Semester5/Game Programming/GameUTS/MyUTS/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.001.dll</HintPath>
+        <HintPath>C:/Users/ACER/Downloads/Compressed/Gamepro_4508-A11201911845-main/UTS/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.001.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-        <HintPath>E:/#DianNuswantoro/#Semester5/Game Programming/GameUTS/MyUTS/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+        <HintPath>C:/Users/ACER/Downloads/Compressed/Gamepro_4508-A11201911845-main/UTS/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.PixelPerfect">
-        <HintPath>E:/#DianNuswantoro/#Semester5/Game Programming/GameUTS/MyUTS/Library/ScriptAssemblies/Unity.2D.PixelPerfect.dll</HintPath>
+        <HintPath>C:/Users/ACER/Downloads/Compressed/Gamepro_4508-A11201911845-main/UTS/Library/ScriptAssemblies/Unity.2D.PixelPerfect.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Tilemap.Editor">
-        <HintPath>E:/#DianNuswantoro/#Semester5/Game Programming/GameUTS/MyUTS/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+        <HintPath>C:/Users/ACER/Downloads/Compressed/Gamepro_4508-A11201911845-main/UTS/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
     <Reference Include="PsdPlugin">
-        <HintPath>E:/#DianNuswantoro/#Semester5/Game Programming/GameUTS/MyUTS/Library/ScriptAssemblies/PsdPlugin.dll</HintPath>
+        <HintPath>C:/Users/ACER/Downloads/Compressed/Gamepro_4508-A11201911845-main/UTS/Library/ScriptAssemblies/PsdPlugin.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-        <HintPath>E:/#DianNuswantoro/#Semester5/Game Programming/GameUTS/MyUTS/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+        <HintPath>C:/Users/ACER/Downloads/Compressed/Gamepro_4508-A11201911845-main/UTS/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualStudio.Editor">
-        <HintPath>E:/#DianNuswantoro/#Semester5/Game Programming/GameUTS/MyUTS/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
+        <HintPath>C:/Users/ACER/Downloads/Compressed/Gamepro_4508-A11201911845-main/UTS/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-        <HintPath>E:/#DianNuswantoro/#Semester5/Game Programming/GameUTS/MyUTS/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+        <HintPath>C:/Users/ACER/Downloads/Compressed/Gamepro_4508-A11201911845-main/UTS/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-        <HintPath>E:/#DianNuswantoro/#Semester5/Game Programming/GameUTS/MyUTS/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+        <HintPath>C:/Users/ACER/Downloads/Compressed/Gamepro_4508-A11201911845-main/UTS/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.IK.Editor">
-        <HintPath>E:/#DianNuswantoro/#Semester5/Game Programming/GameUTS/MyUTS/Library/ScriptAssemblies/Unity.2D.IK.Editor.dll</HintPath>
+        <HintPath>C:/Users/ACER/Downloads/Compressed/Gamepro_4508-A11201911845-main/UTS/Library/ScriptAssemblies/Unity.2D.IK.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
-        <HintPath>E:/#DianNuswantoro/#Semester5/Game Programming/GameUTS/MyUTS/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+        <HintPath>C:/Users/ACER/Downloads/Compressed/Gamepro_4508-A11201911845-main/UTS/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Psdimporter.Editor">
-        <HintPath>E:/#DianNuswantoro/#Semester5/Game Programming/GameUTS/MyUTS/Library/ScriptAssemblies/Unity.2D.Psdimporter.Editor.dll</HintPath>
+        <HintPath>C:/Users/ACER/Downloads/Compressed/Gamepro_4508-A11201911845-main/UTS/Library/ScriptAssemblies/Unity.2D.Psdimporter.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Path.Editor">
-        <HintPath>E:/#DianNuswantoro/#Semester5/Game Programming/GameUTS/MyUTS/Library/ScriptAssemblies/Unity.2D.Path.Editor.dll</HintPath>
+        <HintPath>C:/Users/ACER/Downloads/Compressed/Gamepro_4508-A11201911845-main/UTS/Library/ScriptAssemblies/Unity.2D.Path.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.InternalAPIEditorBridge.001">
-        <HintPath>E:/#DianNuswantoro/#Semester5/Game Programming/GameUTS/MyUTS/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
+        <HintPath>C:/Users/ACER/Downloads/Compressed/Gamepro_4508-A11201911845-main/UTS/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-        <HintPath>E:/#DianNuswantoro/#Semester5/Game Programming/GameUTS/MyUTS/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+        <HintPath>C:/Users/ACER/Downloads/Compressed/Gamepro_4508-A11201911845-main/UTS/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PlasticSCM.Editor">
-        <HintPath>E:/#DianNuswantoro/#Semester5/Game Programming/GameUTS/MyUTS/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
+        <HintPath>C:/Users/ACER/Downloads/Compressed/Gamepro_4508-A11201911845-main/UTS/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-        <HintPath>E:/#DianNuswantoro/#Semester5/Game Programming/GameUTS/MyUTS/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+        <HintPath>C:/Users/ACER/Downloads/Compressed/Gamepro_4508-A11201911845-main/UTS/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-        <HintPath>E:/#DianNuswantoro/#Semester5/Game Programming/GameUTS/MyUTS/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+        <HintPath>C:/Users/ACER/Downloads/Compressed/Gamepro_4508-A11201911845-main/UTS/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics">
-        <HintPath>E:/#DianNuswantoro/#Semester5/Game Programming/GameUTS/MyUTS/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
+        <HintPath>C:/Users/ACER/Downloads/Compressed/Gamepro_4508-A11201911845-main/UTS/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.IK.Runtime">
-        <HintPath>E:/#DianNuswantoro/#Semester5/Game Programming/GameUTS/MyUTS/Library/ScriptAssemblies/Unity.2D.IK.Runtime.dll</HintPath>
+        <HintPath>C:/Users/ACER/Downloads/Compressed/Gamepro_4508-A11201911845-main/UTS/Library/ScriptAssemblies/Unity.2D.IK.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Animation.Triangle.Runtime">
-        <HintPath>E:/#DianNuswantoro/#Semester5/Game Programming/GameUTS/MyUTS/Library/ScriptAssemblies/Unity.2D.Animation.Triangle.Runtime.dll</HintPath>
+        <HintPath>C:/Users/ACER/Downloads/Compressed/Gamepro_4508-A11201911845-main/UTS/Library/ScriptAssemblies/Unity.2D.Animation.Triangle.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Animation.Runtime">
-        <HintPath>E:/#DianNuswantoro/#Semester5/Game Programming/GameUTS/MyUTS/Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll</HintPath>
+        <HintPath>C:/Users/ACER/Downloads/Compressed/Gamepro_4508-A11201911845-main/UTS/Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.PixelPerfect.Editor">
-        <HintPath>E:/#DianNuswantoro/#Semester5/Game Programming/GameUTS/MyUTS/Library/ScriptAssemblies/Unity.2D.PixelPerfect.Editor.dll</HintPath>
+        <HintPath>C:/Users/ACER/Downloads/Compressed/Gamepro_4508-A11201911845-main/UTS/Library/ScriptAssemblies/Unity.2D.PixelPerfect.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-        <HintPath>E:/#DianNuswantoro/#Semester5/Game Programming/GameUTS/MyUTS/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+        <HintPath>C:/Users/ACER/Downloads/Compressed/Gamepro_4508-A11201911845-main/UTS/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics.Editor">
-        <HintPath>E:/#DianNuswantoro/#Semester5/Game Programming/GameUTS/MyUTS/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
+        <HintPath>C:/Users/ACER/Downloads/Compressed/Gamepro_4508-A11201911845-main/UTS/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Common.Runtime">
-        <HintPath>E:/#DianNuswantoro/#Semester5/Game Programming/GameUTS/MyUTS/Library/ScriptAssemblies/Unity.2D.Common.Runtime.dll</HintPath>
+        <HintPath>C:/Users/ACER/Downloads/Compressed/Gamepro_4508-A11201911845-main/UTS/Library/ScriptAssemblies/Unity.2D.Common.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.SpriteShape.Editor">
-        <HintPath>E:/#DianNuswantoro/#Semester5/Game Programming/GameUTS/MyUTS/Library/ScriptAssemblies/Unity.2D.SpriteShape.Editor.dll</HintPath>
+        <HintPath>C:/Users/ACER/Downloads/Compressed/Gamepro_4508-A11201911845-main/UTS/Library/ScriptAssemblies/Unity.2D.SpriteShape.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Common.Editor">
-        <HintPath>E:/#DianNuswantoro/#Semester5/Game Programming/GameUTS/MyUTS/Library/ScriptAssemblies/Unity.2D.Common.Editor.dll</HintPath>
+        <HintPath>C:/Users/ACER/Downloads/Compressed/Gamepro_4508-A11201911845-main/UTS/Library/ScriptAssemblies/Unity.2D.Common.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.SpriteShape.Runtime">
-        <HintPath>E:/#DianNuswantoro/#Semester5/Game Programming/GameUTS/MyUTS/Library/ScriptAssemblies/Unity.2D.SpriteShape.Runtime.dll</HintPath>
+        <HintPath>C:/Users/ACER/Downloads/Compressed/Gamepro_4508-A11201911845-main/UTS/Library/ScriptAssemblies/Unity.2D.SpriteShape.Runtime.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{bf65855a-a551-cc94-f180-1a0aa0e06c88}</Project>
+      <Project>{e4bcb5df-732d-3d0b-7841-ce2b6a57bf56}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
     </ProjectReference>
   </ItemGroup>

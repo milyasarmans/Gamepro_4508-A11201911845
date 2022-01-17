@@ -22,5 +22,7 @@ public class ScoreManager : MonoBehaviour
     {
         score += coinValue;
         text.text = "COINS X" + score.ToString();
+        score++;
+        SaveLoadHighscore.SaveScoreEas(score);
     }
 }
